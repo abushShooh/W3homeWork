@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manifold Header</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dgit remote add origin https://github.com/abushShooh/W3homeWork.gitist/output.css" />
+  </head>
+  <body
+    class="min-h-screen bg-white text-black antialiased font-light"
+    style="font-family: 'Montserrat', sans-serif; font-optical-sizing: auto;"
+  >
+    <header class="bg-white">
+      <div class="mx-auto max-w-[1200px] px-5 py-5 sm:px-8 lg:px-[58px] lg:py-0">
+        <div class="flex min-h-[72px] items-center justify-between lg:min-h-[104px]">
+          <a href="#" class="shrink-0">
+            <img
+              src="./IMAGES/TEXT_LOGO.svg"
+              alt="Manifold"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <button
+            id="menu-toggle"
+            type="button"
+            class="inline-flex h-12 w-12 items-center justify-center text-[#ff3645] transition hover:text-[#f22939] lg:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Toggle menu"
+          >
+            <span class="sr-only">Toggle menu</span>
+            <span class="flex flex-col gap-[5px]">
+              <span class="block h-0.5 w-5 bg-current"></span>
+              <span class="block h-0.5 w-5 bg-current"></span>
+              <span class="block h-0.5 w-5 bg-current"></span>
+            </span>
+          </button>
+
+          <div class="hidden items-center gap-10 lg:flex lg:flex-1 lg:justify-between lg:pl-[76px]">
+            <nav
+              aria-label="Primary"
+              class="flex flex-wrap items-center gap-x-8 gap-y-3 text-[18px] leading-none text-black xl:gap-x-16"
+            >
+              <a href="#" class="transition hover:text-black/60">Services</a>
+              <a href="#" class="transition hover:text-black/60">Portfolio</a>
+              <a href="#" class="transition hover:text-black/60"
+                >Email Marketing Audit</a
+              >
+            </nav>
+
+            <a
+              href="#"
+              class="inline-flex shrink-0 items-center justify-center rounded-[6px] bg-[#ff3645] px-7 py-[14px] text-[16px] font-bold uppercase tracking-[0.02em] text-white transition hover:bg-[#f22939]"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden border-t border-black/10 pb-2 pt-5 lg:hidden">
+          <nav
+            aria-label="Mobile primary"
+            class="flex flex-col items-center gap-4 text-center text-[18px] leading-none text-black"
+          >
+            <a href="#" class="transition hover:text-black/60">Services</a>
+            <a href="#" class="transition hover:text-black/60">Portfolio</a>
+            <a href="#" class="transition hover:text-black/60"
+              >Email Marketing Audit</a
+            >
+          </nav>
+
+          <a
+            href="#"
+            class="mt-5 inline-flex w-full items-center justify-center rounded-[6px] bg-[#ff3645] px-7 py-[14px] text-[16px] font-bold uppercase tracking-[0.02em] text-white transition hover:bg-[#f22939]"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </header>
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.contains("hidden");
+
+          mobileMenu.classList.toggle("hidden");
+          menuToggle.setAttribute("aria-expanded", String(isHidden));
+        });
+      }
+    </script>
+  </body>
+</html>
